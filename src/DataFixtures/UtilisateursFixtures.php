@@ -17,7 +17,7 @@ class UtilisateursFixtures extends Fixture implements DependentFixtureInterface
         $faker = Faker\Factory::create('fr_FR');
 
 
-        for($nbUtilisateur = 1; $nbUtilisateur <= 100; $nbUtilisateur++){
+        for($nbUtilisateur = 1; $nbUtilisateur <= 200; $nbUtilisateur++){
 
             $user = $this->getReference('user_'. $faker->numberBetween(1, 7));
 

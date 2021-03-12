@@ -208,3 +208,241 @@
 
 [12-Mar-2021 12:58:00 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
 
+[12-Mar-2021 13:25:51 Europe/Paris] [info] Matched route "api_utilisateurs_get_collection".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ValidateRequestListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::setDefaultLocale".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\QueryParameterValidateListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::configureLogoutUrlGenerator".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\AddFormatListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\ReadListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurity".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\DeserializeListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurityPostDenormalize".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Bridge\Symfony\Bundle\EventListener\SwaggerUiListener::onKernelRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.controller_arguments" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::onControllerArguments".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] SELECT u0_.id AS id_0, u0_.firstname AS firstname_1, u0_.lastname AS lastname_2, u0_.email AS email_3, u0_.client_id AS client_id_4 FROM utilisateur u0_ ORDER BY u0_.id ASC LIMIT 30
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] SELECT count(u0_.id) AS sclr_0 FROM utilisateur u0_
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\Validator\EventListener\ValidateListener::onKernelView".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\WriteListener::onKernelView".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\SerializeListener::onKernelView".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\RespondListener::onKernelView".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Listener "ApiPlatform\Core\EventListener\RespondListener::onKernelView" stopped propagation of the event "kernel.view".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CacheableResponseVaryListener::onResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\Hydra\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\WebLink\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\HttpCache\EventListener\AddHeadersListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::removeCspHeader".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\DisallowRobotsIndexingListener::onResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onFinishRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:25:51 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [info] Matched route "api_utilisateurs_get_collection".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ValidateRequestListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::setDefaultLocale".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\QueryParameterValidateListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::configureLogoutUrlGenerator".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\AddFormatListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\ReadListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurity".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\DeserializeListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurityPostDenormalize".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Bridge\Symfony\Bundle\EventListener\SwaggerUiListener::onKernelRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.controller_arguments" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::onControllerArguments".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CacheableResponseVaryListener::onResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\Hydra\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\WebLink\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\HttpCache\EventListener\AddHeadersListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::removeCspHeader".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\DisallowRobotsIndexingListener::onResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onFinishRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:16 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [info] Matched route "api_utilisateurs_get_collection".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ValidateRequestListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::setDefaultLocale".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\QueryParameterValidateListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::configureLogoutUrlGenerator".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\AddFormatListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\ReadListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurity".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\EventListener\DeserializeListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Security\EventListener\DenyAccessListener::onSecurityPostDenormalize".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.request" to listener "ApiPlatform\Core\Bridge\Symfony\Bundle\EventListener\SwaggerUiListener::onKernelRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.controller_arguments" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::onControllerArguments".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] SELECT u0_.id AS id_0, u0_.firstname AS firstname_1, u0_.lastname AS lastname_2, u0_.email AS email_3, u0_.client_id AS client_id_4 FROM utilisateur u0_ ORDER BY u0_.id ASC LIMIT 30
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] SELECT count(u0_.id) AS sclr_0 FROM utilisateur u0_
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\Validator\EventListener\ValidateListener::onKernelView".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\WriteListener::onKernelView".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\SerializeListener::onKernelView".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.view" to listener "ApiPlatform\Core\EventListener\RespondListener::onKernelView".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Listener "ApiPlatform\Core\EventListener\RespondListener::onKernelView" stopped propagation of the event "kernel.view".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CorsListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Nelmio\CorsBundle\EventListener\CacheableResponseVaryListener::onResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\Hydra\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\WebLink\EventListener\AddLinkHeaderListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "ApiPlatform\Core\HttpCache\EventListener\AddHeadersListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::removeCspHeader".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\DisallowRobotsIndexingListener::onResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onFinishRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Bundle\SecurityBundle\Debug\TraceableFirewallListener::onKernelFinishRequest".
+
+[12-Mar-2021 13:26:18 Europe/Paris] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
+

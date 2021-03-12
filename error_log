@@ -6,3 +6,5 @@ Did you mean one of these?
     make:docker
     make:serializer"
 
+[12-Mar-2021 13:23:45 Europe/Paris] [critical] Error thrown while running command "doctrine:fixtures:load". Message: "Notice: Undefined index: email"
+
