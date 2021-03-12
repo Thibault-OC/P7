@@ -1,0 +1,8 @@
+[12-Mar-2021 12:50:20 Europe/Paris] [critical] Error thrown while running command "'make:migrations:migrate'". Message: "There are no commands defined in the "make:migrations" namespace.
+
+Did you mean one of these?
+    doctrine:migrations
+    make
+    make:docker
+    make:serializer"
+
