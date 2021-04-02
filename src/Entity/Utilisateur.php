@@ -36,6 +36,7 @@ class Utilisateur
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="utilisateurs")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $client;
 
@@ -80,12 +81,12 @@ class Utilisateur
         return $this;
     }
 
-    public function getClient(): ?User
+    public function getClient(): User
     {
         return $this->client;
     }
 
-    public function setClient(?User $client): self
+    public function setClient(User $client): self
     {
         $this->client = $client;
 
