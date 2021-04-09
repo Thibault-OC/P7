@@ -8,3 +8,5 @@ Did you mean one of these?
 
 [12-Mar-2021 13:23:45 Europe/Paris] [critical] Error thrown while running command "doctrine:fixtures:load". Message: "Notice: Undefined index: email"
 
+[09-Apr-2021 14:34:33 Europe/Paris] 2021-04-09T14:34:33+02:00 [critical] Uncaught Error: syntax error, unexpected ':', expecting ')'
+[09-Apr-2021 14:36:33 Europe/Paris] 2021-04-09T14:36:33+02:00 [critical] Uncaught Error: syntax error, unexpected ':', expecting ')'

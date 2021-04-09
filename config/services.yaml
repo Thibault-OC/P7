@@ -28,7 +28,6 @@ services:
         tags: ['controller.service_arguments']
 
 
-
     App\OpenApi\JwtDecorator:
         decorates: 'api_platform.openapi.factory'
         autoconfigure: false

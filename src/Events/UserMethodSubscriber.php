@@ -46,7 +46,7 @@ class UserMethodSubscriber implements EventSubscriberInterface
         $method = $event->getRequest()->getMethod();
 
         $userCurrent = $event->getControllerResult();
-
+        
        if( $userCurrent instanceof User){
            if($this->checkMethod($method) && $userCurrent->getID() !== $this->user->getId()){
                $error = "impossible de modifier un autre User";
@@ -54,6 +54,7 @@ class UserMethodSubscriber implements EventSubscriberInterface
            }
        }
         if( $userCurrent instanceof Utilisateur){
+
             if($this->checkMethod($method) && $userCurrent->getClient()->getID() !== $this->user->getId()){
                 $error = "impossible de modifier un autre utilisateur";
                 throw new UnauthorizedHttpException($error , $error);
