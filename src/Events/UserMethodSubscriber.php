@@ -7,6 +7,7 @@ namespace App\Events;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use ApiPlatform\Core\EventListener\EventPriorities;
 use App\Entity\User;
+use App\Entity\Utilisateur;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -44,12 +45,22 @@ class UserMethodSubscriber implements EventSubscriberInterface
     {
         $method = $event->getRequest()->getMethod();
 
-        $usertest = $event->getControllerResult();
+        $userCurrent = $event->getControllerResult();
 
-        if($this->checkMethod($method) && $usertest->getID() !== $this->user->getId()){
-            $error = "impossible de modifier un autre utilisateur";
-            throw new UnauthorizedHttpException($error , $error);
+       if( $userCurrent instanceof User){
+           if($this->checkMethod($method) && $userCurrent->getID() !== $this->user->getId()){
+               $error = "impossible de modifier un autre User";
+               throw new UnauthorizedHttpException($error , $error);
+           }
+       }
+        if( $userCurrent instanceof Utilisateur){
+            if($this->checkMethod($method) && $userCurrent->getClient()->getID() !== $this->user->getId()){
+                $error = "impossible de modifier un autre utilisateur";
+                throw new UnauthorizedHttpException($error , $error);
+            }
         }
+
+
 
     }
 
