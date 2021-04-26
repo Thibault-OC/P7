@@ -31,3 +31,9 @@ services:
     App\OpenApi\JwtDecorator:
         decorates: 'api_platform.openapi.factory'
         autoconfigure: false
+
+    'App\EventListener\UserFilterConfigurator':
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, priority: 5 }
+        # Autoconfiguration must be disabled to set a custom priority
+        autoconfigure: false

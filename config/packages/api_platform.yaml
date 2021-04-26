@@ -9,3 +9,10 @@ api_platform:
             apiKey:
                 name: Authorization
                 type: header
+
+
+doctrine:
+    orm:
+        filters:
+            user_filter:
+                class: App\Filter\UserFilter
