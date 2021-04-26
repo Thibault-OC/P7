@@ -20,6 +20,8 @@ class UserMethodSubscriber implements EventSubscriberInterface
 
     private $user;
 
+    // routes vérifications d'accès
+
     private $methodNotAllowed = [
         Request::METHOD_GET,
         Request::METHOD_PUT,
@@ -47,28 +49,40 @@ class UserMethodSubscriber implements EventSubscriberInterface
 
         $userCurrent = $event->getControllerResult();
 
+        //Vérification si le client est un admin
 
-       if( $userCurrent instanceof User){
-           
-           if($this->checkMethod($method) && $userCurrent->getID() !== $this->user->getId()){
-               $error = "impossible de modifier un autre User";
-               throw new UnauthorizedHttpException($error , $error);
-           }
-       }
-        if( $userCurrent instanceof Utilisateur){
+        $hasAccess = in_array('ROLE_ADMIN', $this->user->getRoles());
 
-            if($this->checkMethod($method) && $userCurrent->getClient()->getID() !== $this->user->getId()){
-                $error = "impossible de modifier un autre utilisateur";
-                throw new UnauthorizedHttpException($error , $error);
+        if($hasAccess == false){
+
+           if( $userCurrent instanceof User){
+
+                // Si le client accède à une ressource qui ne lui appartient pas affiche un message d'erreur
+
+                if($this->checkMethod($method) && $userCurrent->getID() !== $this->user->getId()){
+                    $error = "impossible de modifier un autre User";
+                    throw new UnauthorizedHttpException($error , $error);
+                }
             }
+            if( $userCurrent instanceof Utilisateur){
+
+                // Si le client accède à une ressource qui ne lui appartient pas affiche un message d'erreur
+
+                if($this->checkMethod($method) && $userCurrent->getClient()->getID() !== $this->user->getId()){
+                    $error = "impossible de modifier un autre utilisateur";
+                    throw new UnauthorizedHttpException($error , $error);
+                }
+            }
+
         }
-
-
 
     }
 
     public function isAuthenticated(): void
     {
+
+        // Si le client n'est pas connecté
+
         if (null === $this->user) {
             $error = "you are not athentificated";
             throw new  UnauthorizedHttpException($error , $error );

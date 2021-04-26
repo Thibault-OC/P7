@@ -23,11 +23,19 @@ final class UserFilterConfigurator
 
     public function onKernelRequest(): void
     {
-        if ($user = $this->getUser()) {
-            $filter = $this->em->getFilters()->enable('user_filter');
-            $filter->setParameter('id', $user->getId());
-            $filter->setAnnotationReader($this->reader);
-        }
+
+        // On récupère l'ID du client connecté pour lui afficher seulement ces ressources
+            if ($user = $this->getUser()) {
+
+                $hasAccess = in_array('ROLE_ADMIN', $user->getRoles());
+
+                if ($hasAccess == false) {
+                    
+                    $filter = $this->em->getFilters()->enable('user_filter');
+                    $filter->setParameter('id', $user->getId());
+                    $filter->setAnnotationReader($this->reader);
+                }
+            }
 
 
     }

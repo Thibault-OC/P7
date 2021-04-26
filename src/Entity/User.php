@@ -14,14 +14,14 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="`user`")
  * @ApiResource(
  *       collectionOperations={
- *         "get"={"security"="is_granted('ROLE_ADMIN')"},
- *         "post"={"security"="is_granted('ROLE_ADMIN')"}
+ *         "get"={"security"="is_granted('ROLE_ADMIN')", "security_message"="Only admins can access."},
+ *         "post"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."}
  *     },
  *     itemOperations={
  *         "get",
- *         "delete"={"security"="is_granted('ROLE_ADMIN')"},
- *         "patch"={"security"="is_granted('ROLE_ADMIN')"},
- *         "put"={"security"="is_granted('ROLE_ADMIN')"},
+ *         "delete"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "patch"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "put"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
  *     }
  * )
  */
