@@ -1,5 +1,5 @@
 #doc_api h1, 
-#doc_api h2{
+#doc_api h2 {
   text-align: center;
   padding: 30px 0;
   font-family: Open Sans, sans-serif ;
@@ -16,28 +16,28 @@
   padding-bottom: 60px;
 }
 
-#doc_api p{
+#doc_api p {
   font-size: 19px;
   font-family: Open Sans, sans-serif ;
   color: #3b4151;
 }
 
-#doc_api ol li a{
+#doc_api ol li a {
   font-size: 17px;
   font-family: Open Sans, sans-serif ;
   color: #3b4151;
 
 }
 
-#doc_api ol li{
+#doc_api ol li {
   margin-bottom: 15px;
 }
 
-#doc_api .text-center{
+#doc_api .text-center {
   text-align: center;
 }
 
-#doc_api ol{
+#doc_api ol {
   max-width: 600px;
   margin: 0 auto;
   border-radius: 0;
@@ -47,7 +47,7 @@
 }
 
 
-#doc_api .btn{
+#doc_api .btn {
   font-size: 14px;
   font-weight: 700;
   padding: 5px 23px;
@@ -83,12 +83,14 @@ span.text-center {
   text-align: center;
   font-family: Open Sans, sans-serif ;
 }
+
 .collapsible:after {
   content:"+";
   position: absolute;
   display: inline-block;
   right: 18px;
 }
+
 .collapsible.active::after {
   content:"-";
 
@@ -98,15 +100,18 @@ span.text-center {
 .collapsible::hover {
   background-color: #288690;
 }
+
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
 b.color_red {
   color: red;
 }
-code.color_green{
+
+code.color_green {
   color: green;
 }
