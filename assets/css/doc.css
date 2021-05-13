@@ -26,7 +26,6 @@
   font-size: 17px;
   font-family: Open Sans, sans-serif ;
   color: #3b4151;
-
 }
 
 #doc_api ol li {
@@ -51,7 +50,7 @@
   font-size: 14px;
   font-weight: 700;
   padding: 5px 23px;
-  transition: all .3s;
+  transition: all 0.3s;
   border: 2px solid grey;
   border-radius: 4px;
   background: transparent;
@@ -59,7 +58,7 @@
   font-family: sans-serif;
   color: #3b4151;
   margin: 10px;
-  display:inline-block ;
+  display:inline-block;
 }
 
 
@@ -84,16 +83,15 @@ span.text-center {
   font-family: Open Sans, sans-serif ;
 }
 
-.collapsible:after {
-  content:"+";
+.collapsible::after {
+  content: "+";
   position: absolute;
   display: inline-block;
   right: 18px;
 }
 
 .collapsible.active::after {
-  content:"-";
-
+  content: "-";
 }
 
 .active,
