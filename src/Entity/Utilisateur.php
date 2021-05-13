@@ -5,11 +5,28 @@ namespace App\Entity;
 use App\Repository\UtilisateurRepository;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+use App\Annotation\UserAware;
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
- * @ApiResource()
+ * @ApiResource(
+ *    collectionOperations = {
+ *          "get"={
+ *              "method"="GET",
+ *              "path"="/utilisateurs",
+ *          },
+ *          "post",
+ *      },
+ * )
+ * @UserAware(userFieldName="client_id")
  */
+
+// Ajouter ApiFilter pour ajouter un paramètre GET dans la route
+// @ApiFilter(SearchFilter::class, properties={"client":"exact"})
+
+
 class Utilisateur
 {
     /**
@@ -36,6 +53,7 @@ class Utilisateur
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="utilisateurs")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $client;
 
@@ -80,12 +98,12 @@ class Utilisateur
         return $this;
     }
 
-    public function getClient(): ?User
+    public function getClient(): User
     {
         return $this->client;
     }
 
-    public function setClient(?User $client): self
+    public function setClient(User $client): self
     {
         $this->client = $client;
 

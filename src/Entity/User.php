@@ -12,8 +12,20 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
- * @ApiResource()
+ * @ApiResource(
+ *       collectionOperations={
+ *         "get"={"security"="is_granted('ROLE_ADMIN')", "security_message"="Only admins can access."},
+ *         "post"
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "delete"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "patch"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "put"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *     }
+ * )
  */
+
 class User implements UserInterface
 {
     /**

@@ -1,0 +1,456 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="doc_api">
+    <h1>Comment utiliser l'API BILEMO</h1>
+
+    <div class="swagger-ui">
+        <div class="wrapper">
+            <p class="text-center">L'api regroupe un catalogue de téléphone mobile utilisé dans l'entreprise Bile Mo.<br>
+                Vous pourrez retrouver les informations nécessaires aux utilisateurs liés à votre compte client.<br>
+
+
+                <a class="btn" href="http://p7.thibault-vacheron.com/P7/public/index.php/api/"> API</a><a class="btn" href="http://p7.thibault-vacheron.com/P7/public/index.php/api/docs?ui=re_doc"> En savoir plus</a>
+            </p>
+
+            <p class="text-center">Voici plusieurs solutions pour utiliser l'api :</p>
+
+                <span class="text-center">Postman : c'est un logiciel qui va vous permettre d’appeler / tester une API.</span><br>
+                <span class="text-center">Api platform : L'outil utilisé à la création de l'api peut être utilisé pour appeler / tester une API plus visuel que l'utilisation Postman </span>
+
+
+
+            <p></p>
+            <ol>
+                <li>
+                    <a href="#login">Connexion compte client</a>
+                </li>
+                <li>
+                    <a href="#part_2">Consulter la liste des produits BileMo</a>
+                </li>
+                <li>
+                    <a href="#part_3">Consulter les détails d’un produit BileMo </a>
+                </li>
+                <li>
+                    <a href="#part_4">Consulter la liste des utilisateurs inscrits liés à un client sur le site web</a>
+                </li>
+                <li>
+                    <a href="#part_5">Consulter le détail d’un utilisateur inscrit lié à un client</a>
+                </li>
+                <li>
+                    <a href="#part_6">Ajouter un nouvel utilisateur lié à un client</a>
+                </li>
+                <li>
+                    <a href="#part_7">Supprimer un utilisateur ajouté par un client</a>
+                </li>
+            </ol>
+
+            <div id="login">
+                <h2>Connexion compte client</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>Sur l'interface de l'api Bilemo vous pourrez vous connecter pour accéder aux ressources de vos utilisateurs.<br>
+                            Vous allez avoir besoin d'un token pour valider la connexion au service de l'api, dans la partie authentification cliquer sur la route <code>GET /api/login_check</code>.
+
+                        </p>
+                        <img src="{{asset('../assets/images/')}}login_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}login_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Nous utilisons l'écriture au format JSON, c'est un langage léger d’échange de données textuelles.
+                           Remplacer les données par vos accès personnels,<b> attention il vous faudra garder la forme écrite du JSON pour que la requête soit fonctionnelle.</b>
+                        </p>
+                        <img src="{{asset('../assets/images/')}}login_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Après vérifications de vos identifiants l'api retourne le TOKEN, il va être utilisé pour vous identifier, copier le token sans les guillemets</p>
+                        <img src="{{asset('../assets/images/')}}login_4.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Accéder à la partie autorisation.</p>
+                        <img src="{{asset('../assets/images/')}}login_5.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Ajouter <code>bearer</code> et coller le TOKEN</p>
+                        <img src="{{asset('../assets/images/')}}login_6.jpg" alt="bilemo">
+                    </div>
+
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Sur l'interface de l'api Bilemo vous pourrez vous connecter pour accéder aux ressources de vos utilisateurs.<br>
+                            Vous allez avoir besoin d'un token pour valider la connexion au service de l'api, ajouter l'url GET /api/login_check.
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}login_4.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Nous utilisons l'écriture au format JSON,c'est un langage léger d’échange de données textuelles.<br>
+                            Remplacer les données par vos accès personnels, attention il vous faudra garder la forme écrite du JSON pour que la requête soit fonctionnelle.<br>
+                            Ajouter dans le Body -> row
+                            <code>
+                                {
+                                "username": "monAdresseEmail@gmail.com",
+                                "password": "password"
+                                }
+                            </code>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}login_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Il va falloir spécifier à POSTMAN le format d'écriture à utiliser, il faut ajouter dans la partie headers <code class="color_green" >KEY : Content-Type / Value : application/json</code> </p>
+                        <img src="{{asset('../assets/images/postman/')}}login_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête et voici le TOKEN. Copier le sans les guillemets</b>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}login_3.JPG" alt="bilemo">
+                    </div>
+            </div>
+            </div>
+            <div id="part_2">
+                <h2>Consulter la liste des produits BileMo</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Accéder à la liste des produits et cliquer sur la route <code>GET /api/mobiles</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_2_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_2_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Les produits sont renvoyés sous forme de pagination sélectionner la page et exécuter la requête
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_2_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Voici la liste des produits</p>
+                        <img src="{{asset('../assets/images/')}}part_2_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url GET /api/mobiles.
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_1_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                          Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_1_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête et voici la liste des produits</p>
+                        <img src="{{asset('../assets/images/postman/')}}part_1_3.JPG" alt="bilemo">
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="part_3">
+                <h2>Consulter les détails d’un produit BileMo</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Accéder aux détails d'un produit puis cliquer sur la route <code>GET /api/mobiles/{id}</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_3_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_3_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Ajouter l'id du produit à séléctionner.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_3_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Voici le détail du produit</p>
+                        <img src="{{asset('../assets/images/')}}part_3_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url GET /api/mobiles/{id}<br>
+                           Remplacer {id} par l'id du produit à seléctionner
+
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_2_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_2_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête et voici les détails d'un produit</p>
+                        <img src="{{asset('../assets/images/postman/')}}part_2_3.JPG" alt="bilemo">
+                    </div>
+
+                </div>
+            </div>
+            <div id="part_4">
+                <h2>Consulter la liste des utilisateurs inscrits liés à un client sur le site web</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Accéder à la liste des utilisateurs et cliquer sur la route <code>GET  /api​/utilisateurs</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_4_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_4_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Les utilisateurs sont renvoyés sous forme de pagination. Sélectionner la page et exécuter la requête
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_4_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Voici la liste des utilisateurs</p>
+                        <img src="{{asset('../assets/images/')}}part_4_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url GET /api/utilisateurs.
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_3_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_3_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête et voici la liste des utilisateurs </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_3_3.JPG" alt="bilemo">
+                    </div>
+                </div>
+            </div>
+            <div id="part_5">
+                <h2>Consulter le détail d’un utilisateur inscrit lié à un client</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Accéder aux détails d'un utilisateur et cliquer sur la route <code>GET /api/utilisateurs/{id}</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_5_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_5_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Ajouter l'id de l'utilisateur à séléctionner.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_5_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Voici le détail de l'utilisateur</p>
+                        <img src="{{asset('../assets/images/')}}part_5_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url GET /api/utilisateurs/{id}.
+                            Remplacer {id} par l'id de l'utilisateur à seléctionner
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_4_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_4_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête et voici le détail de l'utilisateur </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_4_3.JPG" alt="bilemo">
+                    </div>
+                </div>
+            </div>
+            <div id="part_6">
+                <h2>Ajouter un nouvel utilisateur lié à un client</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                           Pour ajouter un utilisateur <code>POST /api/utilisateurs</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_6_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_6_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Ajouter les imformations de l'utilisateur puis <b class="color_red">supprimer la ligne client. Il sera rempli automatiquement, il faut supprimer la virgule à la dernière ligne</b>
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_6_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Voici le détail du produit</p>
+                        <img src="{{asset('../assets/images/')}}part_6_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url POST /api/utilisateurs.
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_5_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_5_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Il va falloir spécifier à POSTMAN le format d'écriture à utiliser, il faut ajouter dans la partie headers <code class="color_green" >KEY : Content-Type / Value : application/json</code> </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_5_3.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Nous utilisons l'écriture au format JSON, c'est un langage léger d’échange de données textuelles.<br>
+                            Remplacer les données par vos accès personnels, attention il vous faudra garder la forme écrite du JSON pour que la requête soit fonctionnelle.<br>
+                            Ajouter dans le Body -> row
+                            <br><code>
+                                {<br>
+                                &nbsp;&nbsp;"firstname": "Antoine",<br>
+                                &nbsp;&nbsp;"lastname": "lafayette",<br>
+                                &nbsp;&nbsp;"email": "antoine@gmail.com",<br>
+                                }
+                            </code>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_5_4.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête, l'utilisateur à été ajouté  </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_5_5.JPG" alt="bilemo">
+                    </div>
+                </div>
+            </div>
+            <div id="part_7">
+                <h2>Supprimer un utilisateur ajouté par un client</h2>
+                <button type="button" class="collapsible">Api platform</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Supprimer les ressources d'un client et cliquer sur la route <code>DELETE /api/utilisateurs/{id}</code>.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_7_1.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Cliquer sur le bouton "try it out".</p>
+                        <img src="{{asset('../assets/images/')}}part_7_2.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Ajouter l'id de l'utilisateur à supprimer.
+                        </p>
+                        <img src="{{asset('../assets/images/')}}part_7_3.jpg" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Le code 204 nous retourne le bon fonctionnement de la suppression</p>
+                        <img src="{{asset('../assets/images/')}}part_7_4.jpg" alt="bilemo">
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">Postman</button>
+                <div class="content">
+                    <div>
+                        <p>Ajouter l'url DELETE /api/utilisateurs/{id}.
+                            Remplacer {id} par l'id de l'utilisateur à supprimer
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_6_1.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>
+                            Dans la partie Authorization sélectionner Type : Bearer Token et copier le TOKEN dans le champ.
+                            Si vous n'avez pas encore de TOKEN : <a href="#login">Connexion compte client</a>
+                        </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_6_2.JPG" alt="bilemo">
+                    </div>
+                    <div>
+                        <p>Exécuter la requête, le Status 204 est retourné par l'api la ressource a donc été supprimé. </p>
+                        <img src="{{asset('../assets/images/postman/')}}part_6_3.JPG" alt="bilemo">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+{% block javascripts %}
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+{% endblock %}
+{% endblock %}
