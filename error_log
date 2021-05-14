@@ -10,3 +10,10 @@ Did you mean one of these?
 
 [09-Apr-2021 14:34:33 Europe/Paris] 2021-04-09T14:34:33+02:00 [critical] Uncaught Error: syntax error, unexpected ':', expecting ')'
 [09-Apr-2021 14:36:33 Europe/Paris] 2021-04-09T14:36:33+02:00 [critical] Uncaught Error: syntax error, unexpected ':', expecting ')'
+[14-May-2021 12:09:02 Europe/Paris] [critical] Error thrown while running command "doctrine:fixtures:load". Message: "Notice: Undefined property: App\DataFixtures\UsersFixtures::$encoder"
+
+[14-May-2021 12:09:56 Europe/Paris] [critical] Error thrown while running command "doctrine:fixtures:load". Message: "Argument 1 passed to App\Entity\User::setRoles() must be of the type array, string given, called in /home/sxnt8135/public_html/P7.thibault-vacheron.com/P7/src/DataFixtures/UsersFixtures.php on line 66"
+
+[14-May-2021 12:09:56 Europe/Paris] 2021-05-14T12:09:56+02:00 [critical] Uncaught Error: Argument 1 passed to App\Entity\User::setRoles() must be of the type array, string given, called in /home/sxnt8135/public_html/P7.thibault-vacheron.com/P7/src/DataFixtures/UsersFixtures.php on line 66
+[14-May-2021 12:10:53 Europe/Paris] [critical] Error thrown while running command "doctrine:fixtures:load". Message: "Warning: Use of undefined constant ROLE_ADMIN - assumed 'ROLE_ADMIN' (this will throw an Error in a future version of PHP)"
+
