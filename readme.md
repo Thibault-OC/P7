@@ -38,9 +38,11 @@
 <h3>JWT configuration</h3>
 <p>Pour utiliser JWT la création de clefs est nécessaire</p>
 <p>JWT_PASSPHRASE est disponible dans le fichier .env du projet</p>
+
 <ul>
 <li><code>mkdir config/jwt</code></li>
 <li><code>openssl genrsa -out config/jwt/private.pem -aes256 4096</code></li>
 <li><code>openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem</code></li>
 </ul>
 
+<p>Si la route /api n'est pas fonctionnel en local <code>composer require symfony/apache-pack</code></p>
