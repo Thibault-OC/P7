@@ -13,6 +13,10 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/c741d7786baf4bf2885193e024cdaf15)](https://www.codacy.com/gh/Thibault-OC/P7/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Thibault-OC/P7&amp;utm_campaign=Badge_Grade)
 
+<h2>Documentation simplifiée API</h2>
+
+<a href ="http://p7.thibault-vacheron.com/P7/public/index.php/api/doc/"> En savoir plus </a>
+
 <h2>Installation avec git</h2>
 
 <ul>
