@@ -46,3 +46,20 @@
 </ul>
 
 <p>Si la route /api n'est pas fonctionnel en local <code>composer require symfony/apache-pack</code></p>
+
+
+<h3>Identifiants test admin</h3>
+<code>
+{
+  "username": "admin@gmail.com",
+  "password": "password"
+}
+</code>
+
+<h3>Identifiants test d'un utilisateur</h3>
+<code>
+{
+  "username": "antoine@gmail.com",
+  "password": "password"
+}
+</code>
