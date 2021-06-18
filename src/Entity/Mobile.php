@@ -8,7 +8,19 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ORM\Entity(repositoryClass=MobileRepository::class)
- * @ApiResource()
+ * @ORM\Table(name="`mobile`")
+ * @ApiResource(
+ *       collectionOperations={
+ *         "get",
+ *         "post"={"security"="is_granted('ROLE_ADMIN')", "security_message"="Only admins can access."}
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "delete"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "patch"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *         "put"={"security"="is_granted('ROLE_ADMIN')" , "security_message"="Only admins can access."},
+ *     }
+ * )
  */
 class Mobile
 {
